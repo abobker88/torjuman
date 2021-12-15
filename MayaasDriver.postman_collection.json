@@ -1,0 +1,1448 @@
+{
+	"id": "c323c1c8-5a9c-4837-9026-e72ffe21722f",
+	"name": "MayaasDriver",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"9fd99995-d284-46e1-a8a0-9c7934d593ac",
+		"174a0ebb-128f-40f7-a3a3-270034367e96"
+	],
+	"protocolProfileBehavior": {},
+	"folders": [
+		{
+			"id": "9fd99995-d284-46e1-a8a0-9c7934d593ac",
+			"name": "Auth",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"collection": "c323c1c8-5a9c-4837-9026-e72ffe21722f",
+			"folder": null,
+			"order": [
+				"67055858-90e9-4deb-808d-948c0681d710",
+				"eb3d9e7e-a146-403d-8205-c23a5193a07a",
+				"0fd47985-6298-4115-b782-066306670ef7",
+				"0294e172-8f21-483d-9645-4b55c681cdb5",
+				"4ace5947-0dba-4224-895e-e202cd3e9946",
+				"23f02c6a-0109-4cbd-9948-c7557a0ad6da",
+				"ab5b9e48-1023-4404-b82e-c59eadcff4f8",
+				"193598a6-5688-4d22-a553-c9c2d7043000"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "174a0ebb-128f-40f7-a3a3-270034367e96",
+			"name": "Profile",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"collection": "c323c1c8-5a9c-4837-9026-e72ffe21722f",
+			"folder": null,
+			"order": [
+				"996e646b-c30c-4cd7-9d20-f7e28398888c",
+				"2e8806ce-8027-4a17-8e1d-2964b5a28d43",
+				"8f2dcfcc-d3e2-4d2d-a021-58103fe18a6d",
+				"cb0733fa-f7be-495a-bf5c-8b79b1693055",
+				"ae12c4e7-92a3-4c4c-8814-a3e4d96c9690",
+				"bc7406ae-a456-4053-b416-89f801dcbbeb"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"requests": [
+		{
+			"id": "0294e172-8f21-483d-9645-4b55c681cdb5",
+			"name": "check_phone",
+			"url": "{{url}}/api/auth/check_phone",
+			"description": "",
+			"data": [
+				{
+					"key": "phone",
+					"value": "0595442611",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "9fd99995-d284-46e1-a8a0-9c7934d593ac",
+			"headers": "Accept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0fd47985-6298-4115-b782-066306670ef7",
+			"name": "Logout",
+			"url": "{{url}}/api/auth/logout",
+			"description": null,
+			"data": [
+				{
+					"key": "username",
+					"value": "hassan",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "123456",
+					"type": "text"
+				}
+			],
+			"dataOptions": {
+				"params": {}
+			},
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "X-Tenant",
+					"type": "text",
+					"value": "1"
+				},
+				{
+					"key": "Accept",
+					"type": "text",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "ffjaDpWmpISl8Ej3KeVkrbnHNdx9GARjC1ykLoCfHZfrxcQFPQz4NAh6UkB1"
+					}
+				]
+			},
+			"events": null,
+			"folder": "9fd99995-d284-46e1-a8a0-9c7934d593ac",
+			"headers": "X-Tenant: 1\nAccept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "193598a6-5688-4d22-a553-c9c2d7043000",
+			"name": "register",
+			"url": "{{url}}/api/driver/register",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "9fd99995-d284-46e1-a8a0-9c7934d593ac",
+			"headers": "Accept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "23f02c6a-0109-4cbd-9948-c7557a0ad6da",
+			"name": "resend_otp",
+			"url": "{{url}}/api/auth/resend_otp",
+			"description": "",
+			"data": [
+				{
+					"key": "phone",
+					"value": "966595442612",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "9fd99995-d284-46e1-a8a0-9c7934d593ac",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"headers": "Accept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "2e8806ce-8027-4a17-8e1d-2964b5a28d43",
+			"name": "toggle_duty",
+			"url": "{{url}}/api/profile/toggle_duty",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"params": {}
+			},
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "X-Tenant",
+					"type": "text",
+					"value": "1"
+				},
+				{
+					"key": "Accept",
+					"type": "text",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "Pat8Q9T4G5wkat5FqcQTPkDHzoL1HaCgjWdxpNUX50R0MiGrOFp527Tdk6ju"
+					}
+				]
+			},
+			"events": null,
+			"folder": "174a0ebb-128f-40f7-a3a3-270034367e96",
+			"responses": [
+				{
+					"id": "554796a4-804c-4b9b-a07f-ae76b6d881aa",
+					"name": "toggle_duty",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": {\n        \"is_available\": 1\n    }\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "50150a5f-2656-4336-a984-9bc4e0e459a0",
+						"method": "POST",
+						"headers": "X-Tenant: 1\nAccept: application/json",
+						"dataMode": "params",
+						"data": [],
+						"url": "{{url}}/api/drivers/profile/toggle_duty",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "X-Tenant",
+								"type": "text",
+								"value": "1"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						]
+					},
+					"headers": [
+						{
+							"key": "Date",
+							"value": "Sun, 09 Aug 2020 11:42:48 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.38 (Debian)"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "54"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "X559dadf397c1ae00bce61113decac5cf"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=95"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookies": [],
+					"request": "2e8806ce-8027-4a17-8e1d-2964b5a28d43",
+					"collection": "c323c1c8-5a9c-4837-9026-e72ffe21722f"
+				},
+				{
+					"id": "c2da92fb-e977-4b89-99ed-3350a39e8383",
+					"name": "toggle_duty cant switch",
+					"status": "Bad Request",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"message\": \"Cannot switch your status to Offline while on-duty\",\n    \"code\": \"cant_switch_onduty\",\n    \"status\": 400\n}",
+					"responseCode": {
+						"code": 400,
+						"name": "Bad Request",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "7dc12221-6d53-443d-85c8-9a053692848e",
+						"method": "POST",
+						"headers": "X-Tenant: 1\nAccept: application/json",
+						"dataMode": "params",
+						"data": [],
+						"url": "{{url}}/api/drivers/profile/toggle_duty",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "X-Tenant",
+								"type": "text",
+								"value": "1"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						]
+					},
+					"headers": [
+						{
+							"key": "Date",
+							"value": "Sun, 09 Aug 2020 12:59:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.38 (Debian)"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "Xe15d431859f974e7aa9f5c55ddf7f317"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookies": [],
+					"request": "2e8806ce-8027-4a17-8e1d-2964b5a28d43",
+					"collection": "c323c1c8-5a9c-4837-9026-e72ffe21722f"
+				}
+			],
+			"headers": "X-Tenant: 1\nAccept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "4ace5947-0dba-4224-895e-e202cd3e9946",
+			"name": "verify_otp",
+			"url": "{{url}}/api/auth/verify_otp",
+			"description": "",
+			"data": [
+				{
+					"key": "otp",
+					"value": "5882",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "phone",
+					"value": "966595442612",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "9fd99995-d284-46e1-a8a0-9c7934d593ac",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"headers": "Accept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "67055858-90e9-4deb-808d-948c0681d710",
+			"name": "Me",
+			"url": "{{url}}/api/auth/me",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "X-Tenant",
+					"value": "1",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"type": "text"
+				},
+				{
+					"key": "Accept-Language",
+					"value": "en",
+					"type": "text"
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "ffjaDpWmpISl8Ej3KeVkrbnHNdx9GARjC1ykLoCfHZfrxcQFPQz4NAh6UkB1"
+					}
+				]
+			},
+			"events": null,
+			"folder": "9fd99995-d284-46e1-a8a0-9c7934d593ac",
+			"responses": [
+				{
+					"id": "8db544ce-6548-4ebd-9cb9-af10db26e8b1",
+					"name": "Me",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": {\n        \"id\": 121,\n        \"tenant_id\": 1,\n        \"vehicle_id\": 1,\n        \"username\": \"hassan\",\n        \"first_name\": \"11111\",\n        \"last_name\": \"322222222222\",\n        \"phone\": \"96650\",\n        \"email\": null,\n        \"image\": null,\n        \"locale\": \"ar\",\n        \"address\": null,\n        \"employee_id\": null,\n        \"contract_number\": null,\n        \"national_num\": null,\n        \"national_image\": null,\n        \"national_issue_date\": null,\n        \"national_expiration_date\": null,\n        \"insurance_num\": null,\n        \"insurance_image\": null,\n        \"insurance_issue_date\": null,\n        \"insurance_expiration_date\": null,\n        \"is_active\": true,\n        \"is_available\": 1,\n        \"device_type\": null,\n        \"device_token\": null,\n        \"created_at\": \"2020-08-05T06:55:55.000000Z\",\n        \"updated_at\": \"2020-08-09T11:49:43.000000Z\"\n    }\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "3cd9aeb2-b4ed-481f-b0fc-fba127ddbae1",
+						"method": "GET",
+						"headers": "X-Tenant: 1\nAccept: application/json\nAccept-Language: en",
+						"url": "{{url}}/api/drivers/auth/me",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "X-Tenant",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"dataMode": null,
+						"data": null
+					},
+					"headers": [
+						{
+							"key": "Date",
+							"value": "Sun, 09 Aug 2020 12:31:15 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.38 (Debian)"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "Xe62f73dad81edca050a1ffb916f39628"
+						},
+						{
+							"key": "Content-Length",
+							"value": "620"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookies": [],
+					"request": "67055858-90e9-4deb-808d-948c0681d710",
+					"collection": "c323c1c8-5a9c-4837-9026-e72ffe21722f"
+				}
+			],
+			"headers": "//X-Tenant: 1\nAccept: application/json\nAccept-Language: en\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "8f2dcfcc-d3e2-4d2d-a021-58103fe18a6d",
+			"name": "change_locale",
+			"url": "{{url}}/api/profile/change_locale",
+			"description": null,
+			"data": [
+				{
+					"key": "locale",
+					"value": "ar",
+					"type": "text"
+				}
+			],
+			"dataOptions": {
+				"params": {}
+			},
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "X-Tenant",
+					"type": "text",
+					"value": "1"
+				},
+				{
+					"key": "Accept",
+					"type": "text",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "Pat8Q9T4G5wkat5FqcQTPkDHzoL1HaCgjWdxpNUX50R0MiGrOFp527Tdk6ju"
+					}
+				]
+			},
+			"events": null,
+			"folder": "174a0ebb-128f-40f7-a3a3-270034367e96",
+			"responses": [
+				{
+					"id": "6d035fc8-29b0-42d3-bfff-37a3c6b0875f",
+					"name": "change_locale",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": {\n        \"locale\": \"ar\"\n    }\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "25149a63-9df7-4f05-9be2-a78c6829e273",
+						"method": "POST",
+						"headers": "X-Tenant: 1\nAccept: application/json",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "locale",
+								"value": "ar",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/drivers/profile/change_locale",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "X-Tenant",
+								"type": "text",
+								"value": "1"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						]
+					},
+					"headers": [
+						{
+							"key": "Date",
+							"value": "Sun, 09 Aug 2020 12:59:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.38 (Debian)"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "X9f403ca2cb57fe7dc16e47ffe5e9115c"
+						},
+						{
+							"key": "Content-Length",
+							"value": "50"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookies": [],
+					"request": "8f2dcfcc-d3e2-4d2d-a021-58103fe18a6d",
+					"collection": "c323c1c8-5a9c-4837-9026-e72ffe21722f"
+				}
+			],
+			"headers": "X-Tenant: 1\nAccept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "996e646b-c30c-4cd7-9d20-f7e28398888c",
+			"name": "update location",
+			"url": "{{url}}/api/drivers/profile/update_location",
+			"description": null,
+			"data": [
+				{
+					"key": "latitude",
+					"value": "24.4444444444",
+					"type": "text"
+				},
+				{
+					"key": "longitude",
+					"value": "44.2222222222",
+					"type": "text"
+				},
+				{
+					"key": "timestamp",
+					"value": "1700550303",
+					"type": "text"
+				},
+				{
+					"key": "altitude",
+					"value": "20.200",
+					"type": "text"
+				},
+				{
+					"key": "speed_accuracy",
+					"value": "0.9",
+					"type": "text"
+				},
+				{
+					"key": "degrees",
+					"value": "133",
+					"type": "text"
+				},
+				{
+					"key": "speed",
+					"value": "122.01",
+					"type": "text"
+				}
+			],
+			"dataOptions": {
+				"params": {}
+			},
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "X-Tenant",
+					"type": "text",
+					"value": "1"
+				},
+				{
+					"key": "Accept",
+					"type": "text",
+					"value": "application/json"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "174a0ebb-128f-40f7-a3a3-270034367e96",
+			"responses": [
+				{
+					"id": "491dede4-673b-4167-abc1-e24427b4185f",
+					"name": "update location",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": {\n        \"vehicle_id\": 1,\n        \"timestamp\": \"2023-11-21 10:05:03\",\n        \"latitude\": \"24.4444444444\",\n        \"longitude\": \"44.2222222222\",\n        \"altitude\": \"20.200\",\n        \"speed_accuracy\": \"0.9\",\n        \"degrees\": \"133\",\n        \"speed\": \"122.01\",\n        \"driver_id\": 121,\n        \"updated_at\": \"2020-08-09T08:47:38.000000Z\",\n        \"created_at\": \"2020-08-09T08:47:38.000000Z\",\n        \"id\": 3\n    }\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "6bb0a08b-2eb1-421a-ae1a-b4239e6a4ae2",
+						"method": "POST",
+						"headers": "X-Tenant: 1\nAccept: application/json",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "latitude",
+								"value": "24.4444444444",
+								"type": "text"
+							},
+							{
+								"key": "longitude",
+								"value": "44.2222222222",
+								"type": "text"
+							},
+							{
+								"key": "timestamp",
+								"value": "1700550303",
+								"type": "text"
+							},
+							{
+								"key": "altitude",
+								"value": "20.200",
+								"type": "text"
+							},
+							{
+								"key": "speed_accuracy",
+								"value": "0.9",
+								"type": "text"
+							},
+							{
+								"key": "degrees",
+								"value": "133",
+								"type": "text"
+							},
+							{
+								"key": "speed",
+								"value": "122.01",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/drivers/profile/update_location",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "X-Tenant",
+								"type": "text",
+								"value": "1"
+							},
+							{
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							}
+						]
+					},
+					"headers": [
+						{
+							"key": "Date",
+							"value": "Sun, 09 Aug 2020 08:47:38 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.38 (Debian)"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "X371beb1d22b9bd01b0968b9d928c1e3a"
+						},
+						{
+							"key": "Content-Length",
+							"value": "325"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookies": [],
+					"request": "996e646b-c30c-4cd7-9d20-f7e28398888c",
+					"collection": "c323c1c8-5a9c-4837-9026-e72ffe21722f"
+				}
+			],
+			"headers": "X-Tenant: 1\nAccept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ab5b9e48-1023-4404-b82e-c59eadcff4f8",
+			"name": "create_password_register",
+			"url": "{{url}}/api/auth/create_password_register",
+			"description": "",
+			"data": [
+				{
+					"key": "password",
+					"value": "test123",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "device_token",
+					"value": "sadsadasdsad",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "device_type",
+					"value": "asdasd",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "locale",
+					"value": "ar",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "phone",
+					"value": "966595442612",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "9fd99995-d284-46e1-a8a0-9c7934d593ac",
+			"headers": "Accept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "ae12c4e7-92a3-4c4c-8814-a3e4d96c9690",
+			"name": "reset_password",
+			"url": "{{url}}/api/profile/reset_password?phone=966595442612",
+			"description": "",
+			"data": [
+				{
+					"key": "phone",
+					"value": "966595442612",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "phone",
+					"value": "966595442612",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "zAtwoyGQZL48Q58j5YF4kpUoewGyVwjvvFAdNL3KJSboH4icpp1PC6Jk2q1k"
+					}
+				]
+			},
+			"events": [],
+			"folder": "174a0ebb-128f-40f7-a3a3-270034367e96",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"headers": "Accept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "bc7406ae-a456-4053-b416-89f801dcbbeb",
+			"name": "password_create_reset",
+			"url": "{{url}}/api/profile/password_create_reset",
+			"description": "",
+			"data": [
+				{
+					"key": "current_password",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "new_password",
+					"value": "tesr2",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "otp",
+					"value": "3211",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "zAtwoyGQZL48Q58j5YF4kpUoewGyVwjvvFAdNL3KJSboH4icpp1PC6Jk2q1k"
+					}
+				]
+			},
+			"events": [],
+			"folder": "174a0ebb-128f-40f7-a3a3-270034367e96",
+			"headers": "Accept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "cb0733fa-f7be-495a-bf5c-8b79b1693055",
+			"name": "update_password",
+			"url": "{{url}}/api/profile/update_password",
+			"description": "",
+			"data": [
+				{
+					"key": "current_password",
+					"value": "test1234",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "new_password",
+					"value": "test1234",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "new_confirm_password",
+					"value": "test1234",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataOptions": null,
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "51uIuFpXGHjC20nLRvCEwHsknJRzaS0VMlJQ5hj9ao3BZen0wiREpQGHMVj0"
+					}
+				]
+			},
+			"events": [],
+			"folder": "174a0ebb-128f-40f7-a3a3-270034367e96",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"headers": "Accept: application/json\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "eb3d9e7e-a146-403d-8205-c23a5193a07a",
+			"name": "Login",
+			"url": "{{url}}/api/auth/login",
+			"description": null,
+			"data": [
+				{
+					"key": "phone",
+					"value": "966595442612",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "test1234",
+					"type": "text"
+				},
+				{
+					"key": "device_type",
+					"value": "1",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "device_token",
+					"value": "asdfaaaaaaaaaaaaaaaaaaaaaaaaaa.....aaaaaaaaaaaaaaaaaa",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataOptions": {
+				"params": {}
+			},
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "X-Tenant",
+					"value": "1",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"type": "text"
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "72b0ea79-2a0f-4fe0-99fc-d28bcfd0d8e2",
+						"exec": [
+							"var token = pm.response.json().data.token",
+							"",
+							"pm.environment.set(\"token\", token);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"folder": "9fd99995-d284-46e1-a8a0-9c7934d593ac",
+			"responses": [
+				{
+					"id": "2b37115d-fafa-4f53-81f3-27aed72c5e00",
+					"name": "Login",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": {\n        \"token\": \"HWcBHQfjc48v6dbaPnNdjgCopS3evFjOPIMXSqJtArvMiG73h8asXhznTDW1\",\n        \"tenant\": 1\n    }\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "2a109fce-5d37-47ef-a1f1-09b97021cc9b",
+						"method": "POST",
+						"headers": "X-Tenant: 1\nAccept: application/json",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "username",
+								"value": "hassan",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "123456",
+								"type": "text"
+							},
+							{
+								"key": "device_type",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "device_token",
+								"value": "asdfaaaaaaaaaaaaaaaaaaaaaaaaaa.....aaaaaaaaaaaaaaaaaa",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/drivers/auth/login",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "X-Tenant",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						]
+					},
+					"headers": [
+						{
+							"key": "Date",
+							"value": "Sun, 09 Aug 2020 13:03:31 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.38 (Debian)"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "X97b809e4c93d8501623393d53418f668"
+						},
+						{
+							"key": "Content-Length",
+							"value": "118"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5, max=100"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookies": [],
+					"request": "eb3d9e7e-a146-403d-8205-c23a5193a07a",
+					"collection": "c323c1c8-5a9c-4837-9026-e72ffe21722f"
+				},
+				{
+					"id": "8edc2699-d4bd-490a-8989-4735c6573eec",
+					"name": "Login failed",
+					"status": "Bad Request",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"message\": \"These credentials do not match our records\",\n    \"code\": \"login_failed\",\n    \"status\": 400\n}",
+					"responseCode": {
+						"code": 400,
+						"name": "Bad Request",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "ec3f4f01-a390-47e0-9f84-8a873a601f9b",
+						"method": "POST",
+						"headers": "X-Tenant: 1\nAccept: application/json",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "username",
+								"value": "hassan",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "1234561",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/drivers/auth/login",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "X-Tenant",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						]
+					},
+					"headers": [
+						{
+							"key": "Date",
+							"value": "Sun, 09 Aug 2020 12:54:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Apache/2.4.38 (Debian)"
+						},
+						{
+							"key": "Vary",
+							"value": "Authorization"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "phpdebugbar-id",
+							"value": "X6748331db386ae33d4e95acdbd8d2de7"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookies": [],
+					"request": "eb3d9e7e-a146-403d-8205-c23a5193a07a",
+					"collection": "c323c1c8-5a9c-4837-9026-e72ffe21722f"
+				}
+			],
+			"headers": "//X-Tenant: 1\nAccept: application/json\n",
+			"pathVariables": {}
+		}
+	]
+}
