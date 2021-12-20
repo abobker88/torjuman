@@ -212,7 +212,7 @@ class OrderController extends Controller
 
         public function chat(Request $request)
         {
-            $chats=TranslationChat::where('order_id',$request->order_id)->get();
+            $chats=TranslationChat::where('order_id',$request->order_id)->where('message_from','translator')->get();
 
             $user=User::find($request->user_id);
             $order=Order::find($request->order_id);

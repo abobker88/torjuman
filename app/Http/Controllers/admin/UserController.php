@@ -8,6 +8,7 @@ use App\Models\OrderTranslator;
 use App\Models\TranslationChat;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Laracasts\Flash\Flash;
 use Spatie\Permission\Contracts\Role;
@@ -124,13 +125,13 @@ class UserController extends Controller
         try{
            if($request->password!=''){
           
-            $user=User::whereId($request->id)->update([
+            $id=User::whereId($request->id)->update([
                 'name'=>$request->name,
                 'email'=>$request->email,
                 'password'=>Hash::make($request->password)
             ]);
         } else {
-            $user=User::whereId($request->id)->update([
+            $id=User::whereId($request->id)->update([
                 'name'=>$request->name,
                 'email'=>$request->email,
                
@@ -142,21 +143,29 @@ class UserController extends Controller
     //    dd($user->removeRole($user->getRoleNames()));
     //         if($user)
     //         {
-        
+        $user = User::find($request->id);
+       // DB::table('model_has_roles')->where('model_id',$user->id)->delete();
+      
                 switch($request->role){
                     case 1 : 
+                        DB::table('model_has_roles')->where('model_id',$user->id)->delete();
                         $user->assignRole('translator');
+
                         break;
                     case 2 : 
+                        DB::table('model_has_roles')->where('model_id',$user->id)->delete();
                           $user->assignRole('checker');
                           break;
                     case 3 : 
+                        DB::table('model_has_roles')->where('model_id',$user->id)->delete();
                         $user->assignRole('customer service');
                         break;
                     case 4 : 
+                        DB::table('model_has_roles')->where('model_id',$user->id)->delete();
                         $user->assignRole('operation manager');
                         break;
                     case 5 : 
+                        DB::table('model_has_roles')->where('model_id',$user->id)->delete();
                         $user->assignRole('accounting');
                         break;
                 }

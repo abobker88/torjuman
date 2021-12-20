@@ -119,7 +119,7 @@ input:checked + .slider:before {
                                                         <a class="dropdown-item show"  data-download_order="{{$order->order->id}}"   href="#">{{ __('models/translator.download_order') }}</a> 
                                                     
                                                       {{-- <a class="dropdown-item accept_order" data-accept_order={{$order->id}} href="#">{{ __('models/translator.accept_order') }}</a> --}}
-                                                      <a class="dropdown-item update_price" data-service="{{$order->order->service->name}}" data-old_price="{{$order->order->total_amount}}"  data-order_id={{$order->order->id}} href="#">{{ __('models/translator.update_price') }}</a>
+                                                      <a class="dropdown-item update_price" data-service="{{$order->order->service->name}}" data-old_price="{{$order->order->sub_total}}" data-total_old_price="{{$order->order->total_amount}}" data-vat_old_price="{{$order->order->vat_value}}"  data-order_id={{$order->order->id}} href="#">{{ __('models/translator.update_price') }}</a>
                                                 
                                                       {{-- <div class="dropdown-divider"></div>
                                                       <a class="dropdown-item" href="#">Separated link</a> --}}
@@ -162,6 +162,10 @@ input:checked + .slider:before {
                                     <input hidden name="order_id" id="order_id" >
                                     <label>{{ __('models/translator.old_price') }} <a href="javascript:void(0)"  class="custom-file-container__image-clear" title="Clear Image"></a></label>
                                     <input type="number" class="form-control" disabled id="old_price">
+                                    <label>{{ __('models/translator.vat_value') }} <a href="javascript:void(0)"  class="custom-file-container__image-clear" title="Clear Image"></a></label>
+                                    <input type="number" class="form-control" disabled id="vat_value">
+                                    <label>{{ __('models/translator.total_amount') }} <a href="javascript:void(0)"  class="custom-file-container__image-clear" title="Clear Image"></a></label>
+                                    <input type="number" class="form-control" disabled id="total_amount">
                                     <label>{{ __('models/translator.service') }} <a href="javascript:void(0)"  class="custom-file-container__image-clear" title="Clear Image"></a></label>
                                     <input type="text" class="form-control" disabled id="service_name">
                                     <label>{{ __('models/translator.new_price') }} <a href="javascript:void(0)"  class="custom-file-container__image-clear" title="Clear Image"></a></label>
@@ -325,10 +329,14 @@ input:checked + .slider:before {
     $(".update_price").click(function(event){
            var order_id= $(this).data("order_id");
            var old_price = $(this).data("old_price");
+           var vat_value = $(this).data("vat_old_price");
+           var total_amount = $(this).data("total_old_price");
            var service = $(this).data("service");
            
             $('#order_id').val(order_id);
             $('#old_price').val(old_price);
+            $('#total_amount').val(total_amount);
+            $('#vat_value').val(vat_value);
             $('#service_name').val(service);
            $('#updateModal').modal('show');
          
@@ -338,7 +346,7 @@ input:checked + .slider:before {
     $("#new_update_price").click(function(event){
   var order_id= $('#order_id').val();;
   var new_price =$('#new_price').val();;
-alert(order_id);
+5
 request = $.ajax({
         url: '{{route('customer_service.update_price')}}',
         type: "post",
