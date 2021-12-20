@@ -8,7 +8,6 @@
             <ul class="navbar-item theme-brand flex-row  text-center">
                 <li class="nav-item theme-logo">
                     <a href="/analytics">
-<<<<<<< HEAD
                         <svg id="Component_20_9" data-name="Component 20 – 9" xmlns="http://www.w3.org/2000/svg" width="192.64" height="62.964" viewBox="0 0 192.64 62.964">
                             <g id="Group_3435" data-name="Group 3435" transform="translate(-275.481 -250.093)">
                               <path id="Path_2809" data-name="Path 2809" d="M373.518,280.855a2.19,2.19,0,0,0-2.19,2.19v27.263c0,6.148-2.374,8.051-3.516,8.964-.164.132-.305.246-.419.346a2.19,2.19,0,0,0,2.9,3.284c.07-.062.158-.132.26-.213,1.411-1.13,5.158-4.131,5.158-12.382V283.045A2.19,2.19,0,0,0,373.518,280.855Z" transform="translate(-30.802 -10.393)" fill="#464646" style="stroke: #918a8a;fill: white;"></path>
@@ -32,29 +31,7 @@
              
             </ul>
 
-=======
-                        <img src="{{asset('storage/img/assets/logo.png')}}" class="navbar-logo" alt="logo">
-                    </a>
-                </li>
-                <li class="nav-item theme-text">
-                    <a href="/analytics" class="nav-link">{{ __('models/translator.Torjuman') }}  </a>
-                </li>
-            </ul>
 
-            @if ($category_name != 'starter_kits')
-            {{-- <ul class="navbar-item flex-row ml-md-0 ml-auto">
-                <li class="nav-item align-self-center search-animated">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search toggle-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    <form class="form-inline search-full form-inline search" role="search">
-                        <div class="search-bar">
-                            <input type="text" class="form-control search-form-control  ml-lg-auto" placeholder="Search...">
-                        </div>
-                    </form>
-                </li>
-            </ul> --}}
-            @endif
-            
->>>>>>> 8b437d3b5f966d222d743b6f342cc26a30b87a9c
             <ul class="navbar-item flex-row ml-md-auto">
 
                 @if ($category_name != 'starter_kits')
