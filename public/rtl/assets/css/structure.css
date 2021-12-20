@@ -111,7 +111,7 @@ code {
   position: relative;
   width: 50%;
   flex-grow: 8;
-  margin-top: 106px;
+  margin-top: 133px;
   margin-bottom: 0;
   margin-right: 212px;
   transition: 0.6s;
@@ -885,7 +885,7 @@ code {
   transition: 0.6s;
   margin-bottom: 4px;
   font-weight: 600;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 #sidebar ul.menu-categories li.menu > .dropdown-toggle > div {
   align-self: center;
