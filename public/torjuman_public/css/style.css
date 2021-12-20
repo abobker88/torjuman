@@ -1,0 +1,310 @@
+body{
+    background-color: #FAFCFE;
+}
+.autohide{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    background-color: #e8faf8!important;
+}
+.scrolled-down{
+    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+
+li.nav-item {
+    margin: 0 20px 0 20px;
+}
+
+
+@media screen and (min-width: 992px){
+    .navbar-brand {
+    margin-left: 2rem;
+    }
+    .hero_bg_color{
+    min-height: 85vh;
+    }
+     }
+@media screen and (min-width: 993px){
+.navbar-brand {
+margin-left: 4.5rem;
+}
+}
+
+div#main_nav {
+margin-right: 8rem;
+}
+
+.nav-shadow{
+-webkit-box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.41); 
+box-shadow: 0px 6px 8px 0px rgb(0 0 0 / 20%);
+}
+
+.hero_bg_color{
+    /* background-color: #FAFCFE; */
+    margin: auto;
+}
+
+.fq_btn{
+    background-color: #464646;
+    color: white;
+    border-radius: 10px;
+}
+
+.hero_p{
+margin-top: 2rem;
+margin-bottom: 2rem;
+color: #444444;
+}
+
+.h1_hero{
+    margin-bottom: 2rem!important;
+    color: #444444;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 992px){
+.h1_hero{
+    text-align: center;
+}
+.hero_p{
+    text-align: center;
+}
+.fq_btn_center{
+    place-content: center;
+}
+}
+
+/* Hero END */
+
+
+/* features Start */
+.features_bg_color{
+    margin: auto;
+    background: #EBF1F6;
+}
+
+.wave_img{
+    background-image: url(/torjuman_public/media/img/aboutus_background.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+.footer_bg_color{
+    background-image: url(/torjuman_public/media/img/footer_background.svg);
+    background-repeat: no-repeat;
+    min-height: 35vh;
+    background-size: cover;
+}
+
+
+/* feature_img FIX */
+
+@media only screen and (min-width: 1400px) and (max-width: 1856px)  {
+    .feature_img {
+     margin-top: 17%;
+ }
+ 
+     }
+ 
+ 
+  @media only screen and (min-width: 992px) and (max-width: 1242px)  {
+    .feature_img {
+     margin-top: 17%;
+ }
+ 
+     }
+ 
+     @media screen and (max-width: 991px){
+        .ninenineone-pix-fit{
+            margin-top: 5%;
+        }
+            .center_btn{
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    }
+     
+    
+     /* still there's 768px to 916px*/
+
+    @media only screen and (min-width: 916px) and (max-width: 991px)  {
+        .ninenineone-pix-fit{
+            max-width: fit-content;
+        }
+     
+         }
+
+         /* Footer 555px to 0px fix */
+         @media screen and (max-width: 991px){
+            .footer-mobile-fix{
+                display: block;
+            }
+            .padding-footer-mobile-fix{
+                margin: 4% 0% 0% 0%;
+            }
+         }
+
+
+        /* Fix everything section Images */
+    @media only screen and (min-width: 453px) and (max-width: 767px)  {
+        .center-evSection-img{
+            margin: auto;
+        }
+     
+         }
+
+
+
+.login-container {
+  margin-top: 13vw;
+  background: url(./assets/login-background.svg);
+  background-size: cover;
+}
+
+.login-container .login-cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.login-container .login-cols .login-logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.login-container .login-cols .login-logo .login-img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+.login-container .login-cols .login-form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.login-container .login-cols .login-form form .form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.login-container .login-cols .login-form form .form-group i.bi {
+  position: absolute;
+  left: 10px;
+  top: 30px;
+  font-size: 18px;
+}
+
+.login-container .login-cols .login-form form .form-group input.form-control {
+  border-radius: 5px;
+  border: 1px solid #D6E2EF;
+  background: #F0F5FA;
+  padding: 10px;
+  font-size: 1rem;
+  line-height: 22px;
+  font-weight: 400;
+  color: #464646;
+  min-height: 40px;
+  padding-left: 40px;
+  width: 35vw;
+}
+
+.login-container .login-cols .login-form form .form-group input.form-control:focus {
+  border: none;
+  outline: none;
+}
+
+.login-container .login-cols .login-form form .form-group .login-btn {
+  width: 100%;
+  background-color: #707070;
+  color: #fff;
+  margin-top: 2%;
+  border-radius: 11px;
+}
+
+.btn-hover:hover{
+background-color: #00AFA1!important;
+}
+
+input.button-add {
+  background-image: url(/torjuman_public/media/img/signup_google_img.png); /* 16px x 16px */
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: center;  /* equivalent to 'top left' */
+  cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  vertical-align: middle; /* align the text vertically centered */
+}
+
+.login-container .login-cols .login-form .user-actions .forgot-password {
+  margin-bottom: 1rem;
+}
+
+.login-container .login-cols .login-form .user-actions .forgot-password span {
+  color: #3177D4;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.login-container .login-cols .login-form .user-actions .sign-up span {
+  color: #3177D4;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 769px) {
+  .login-container .login-cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 30px;
+  }
+  .login-container .login-cols .login-logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .login-container .login-cols .login-form form .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .login-container .login-cols .login-form form .form-group input.form-control {
+    width: 75vw;
+  }
+  .login-container .login-cols .login-form form .form-group .login-btn {
+    width: 100%;
+    background-color: #707070;
+    color: #fff;
+  }
+}

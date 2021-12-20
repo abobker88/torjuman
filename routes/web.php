@@ -109,15 +109,15 @@ Route::get('/password/reset', function() {
 });
 
 Route::get('/', function() {
-    return view('website.home');    
+    return view('torjuman_website.welcome');    
 })->name('website.home');;
 
 Route::get('/website/login', function() {
-    return view('website.login');    
+    return view('torjuman_website.login');    
 })->name('website.login');
 
 Route::get('/website/register', function() {
-    return view('website.register');    
+    return view('torjuman_website.signup');    
 })->name('website.register');
 
 Route::post('user/register/submit', 'website\UserController@register')->name('website.register.post');   
