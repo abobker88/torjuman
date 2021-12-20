@@ -44,7 +44,12 @@ class OrderController extends Controller
              
              $order=Order::find($request->order_id);
              $order->status='up'; // update price to user
-             $order->total_amount=$request->new_price;
+             $order->sub_total=$request->new_price;
+             $vat=$order->sub_total * .15;
+             $order->vat_value= $vat;
+             $order->total_amount= $vat+$request->new_price;
+ 
+         
              $order->save();
              if(! Route::currentRouteName()=='customer_service.order.services')
              {
@@ -63,7 +68,11 @@ class OrderController extends Controller
             
             $order=Order::find($request->order_id);
             $order->status='up'; // update price to user
-            $order->total_amount=$request->new_price;
+            $order->sub_total=$request->new_price;
+            $vat=$order->sub_total * .15;
+            $order->vat_value= $vat;
+            $order->total_amount= $vat+$request->new_price;
+
             $order->save();
             
             OrderOperationCancel::where('order_id',$order->id)->update([

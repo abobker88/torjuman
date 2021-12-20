@@ -125,5 +125,7 @@ return [
 'about_us'                       =>'About US',
 'services'                       =>'Services',
 'Features'                       =>'Features',
-'Sign_in'                        =>'Sign In'
+'Sign_in'                        =>'Sign In',
+'Torjuman'                       =>'Torjuman'
+
 ];

@@ -126,6 +126,7 @@ return [
 'about_us'                       =>'عننا',
 'services'                       =>'الخدمات',
 'Features'                       =>'الخصائص',
-'Sign_in'                        =>'تسجيل دخول'
+'Sign_in'                        =>'تسجيل دخول',
+'Torjuman'                       =>'ترجمان'
 
 ];

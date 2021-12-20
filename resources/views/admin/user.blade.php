@@ -321,7 +321,7 @@ input:checked + .slider:before {
             
           if(role =='translator')
           {
-            alert(role);
+           
             check=0; 
           }else if(role=='checker'){
             check=1
