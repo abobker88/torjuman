@@ -22,6 +22,8 @@
 
       
 
-<script src="torjuman_public/js/script.js"></script>
+
+      @include('inc.footer_web')
+      @yield('page_scripts')
     </body>
 </html>

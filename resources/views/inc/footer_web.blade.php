@@ -1,21 +1,3 @@
-<footer>
-    <div class="footer-content">
-      <div class="app-icons">
-        <a href="#" class="app-icon">
-          <img loading="lazy"src="{{asset('storage/img/assets/app-store.svg')}}" alt="app store" class="app-icon-img" />
-        </a>
-        <a href="#" class="app-icon">
-          <img loading="lazy"src="{{asset('storage/img/assets/google-play.svg')}}" alt="google play" class="app-icon-img" />
-        </a>
-        
-      </div>
-      <div class="copy-rights">
-        <p class="copy-right-text">
-          @all right reserved to Turjoman
-        </p>
-      </div>
-    </div>
-  </footer>
 
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

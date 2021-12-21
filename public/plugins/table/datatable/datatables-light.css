@@ -43,6 +43,7 @@ div.dataTables_wrapper div.dataTables_length label {
 div.dataTables_wrapper div.dataTables_length select {
   width: 75px;
   display: inline-block;
+  width: fit-content;
 }
 div.dataTables_wrapper div.dataTables_filter {
   text-align: right;

@@ -30,10 +30,16 @@
             <div class="form-form-wrap">
                 <div class="form-container">
                     <div class="form-content">
-
-                        <h1 class="">Sign In</h1>
-                        <p class="">Log in to your account to continue.</p>
                         
+                        <h1 class="" style="margin-top: 2.5rem;color: #464646 !important;">Sign In</h1>
+                        
+                        <img
+                        src=" {{asset('torjuman_public/media/img/loginform_img.png')}}"
+                        alt=""
+                        srcset=""
+                        class="login-img"
+                        style="width: 55%;"
+                      />                   
                         <form method="POST" action="{{ route('login') }}" class="text-left">
 
                             @csrf
@@ -69,13 +75,15 @@
                                 </div>
                                 <div class="d-sm-flex justify-content-between">
                                     <div class="field-wrapper">
-                                        <button type="submit" class="btn btn-primary" value="">{{ __('Login') }}</button>
+                                        <button style="background-color: #464646 !important;" type="submit" class="btn btn-primary" value="">{{ __('Login') }}</button>
                                     </div>
                                 </div>
 
-                                
+              
+                                <div class="division">
+                                    <span></span>
+                              </div>
 
-                               
 
 
                             </div>
