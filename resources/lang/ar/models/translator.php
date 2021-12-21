@@ -127,6 +127,9 @@ return [
 'services'                       =>'الخدمات',
 'Features'                       =>'الخصائص',
 'Sign_in'                        =>'تسجيل دخول',
-'Torjuman'                       =>'ترجمان'
+'Torjuman'                       =>'ترجمان',
+'report_financial'                =>'تقرير مالي',
 
+'vat_value'                   =>'قيمة الضريبة',
+'total_amount'                =>'المبلغ الكلي',
 ];

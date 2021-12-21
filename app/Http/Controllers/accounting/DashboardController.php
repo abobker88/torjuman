@@ -45,4 +45,20 @@ class DashboardController extends Controller
     
           return view('accounting.dashboard')->with($data);
     }
+
+    public function report(Request $request)
+    {
+        $orders=Order::where('status','c')->with('user')->whereHas('service',function($q){
+           
+        })->get();
+
+        $data = [
+            'category_name' => 'datatable',
+            'page_name' => 'orders_page',
+            'has_scrollspy' => 0,
+            'scrollspy_offset' => '',
+        ];
+
+       return view('accounting.report', compact('orders'))->with($data);
+    }
 }

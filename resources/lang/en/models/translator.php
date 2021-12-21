@@ -126,6 +126,10 @@ return [
 'services'                       =>'Services',
 'Features'                       =>'Features',
 'Sign_in'                        =>'Sign In',
-'Torjuman'                       =>'Torjuman'
+'Torjuman'                       =>'Torjuman',
+'report_financial'                =>' Financial Report',
+
+'vat_value'                   =>'vat value',
+'total_amount'                =>'total amount',
 
 ];

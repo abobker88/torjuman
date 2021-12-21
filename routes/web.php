@@ -91,6 +91,7 @@ Route::group(['middleware' => 'auth'] , function() {
 
     //accounting
     Route::get('/accounting/dashboard', 'accounting\DashboardController@dashboard')->name('accounting.dashboard');
+    Route::get('/accounting/report', 'accounting\DashboardController@report')->name('accounting.report');
 
     
     
